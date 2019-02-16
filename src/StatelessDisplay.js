@@ -22,7 +22,7 @@ import React from 'react';
 // class StatelessDisplay extends Component{
   // render(){
   const StatelessDisplay = (props) => {
-    const { displayInfos, deleteInfo } = props; // this is similar to const displayInfos = this.props.displayInfos
+    const { displayInfos } = props; // this is similar to const displayInfos = this.props.displayInfos
 
     const displayList = displayInfos.map( info => {
       // Sometimes we just want to render some part of the component and we can dothat.
@@ -34,7 +34,7 @@ import React from 'react';
           <div> Name: { info.name } </div>
           <div> Age: { info.age } </div>
           <div> Birth-month: { info.birthMonth } </div>
-          <button onClick={() => {deleteInfo(info.id)}}> Delete </button>
+          <button> Delete </button>
         </div>
       )
     });

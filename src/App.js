@@ -64,25 +64,6 @@ class App extends Component {
     })
   }
 
-  deleteInfo = (id) => {
-      console.log(id);
-      let displayInfos = this.state.displayInfos.filter(info => {
-        return info.id !== id
-      });
-      this.setState({
-        displayInfos: displayInfos
-      })
-  }
-
-  componentDidMount(){
-      console.log('Componentis mounted');
-  }
-
-  componentDidUpdate(prevProps, prevState, snapshot){
-    console.log('Component Updated');
-    console.log(prevProps, prevState);
-  }
-
   render() {
 
     /*
@@ -98,7 +79,7 @@ class App extends Component {
       <div className="App">
         <h1>This is our first react App</h1>
         <p>Let's Begin</p>
-        <StatelessDisplay deleteInfo= {this.deleteInfo} displayInfos={this.state.displayInfos} />
+        <StatelessDisplay displayInfos={this.state.displayInfos} />
         <AddInfo addInfo={this.addInfo} />
       </div>
     );
