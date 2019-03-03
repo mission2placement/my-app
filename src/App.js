@@ -100,7 +100,7 @@ class App extends Component {
       <div className="App">
         <h1>This is our first react App</h1>
         <p>Let's Begin</p>
-        <StatelessDisplay deleteInfo= {this.deleteInfo} displayInfos={this.state.displayInfos} />
+        <StatelessDisplay displayInfos={this.state.displayInfos} />
         <AddInfo addInfo={this.addInfo} />
       </div>
     );
