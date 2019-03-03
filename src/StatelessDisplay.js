@@ -34,9 +34,13 @@ import React from 'react';
           <div> Name: { info.name } </div>
           <div> Age: { info.age } </div>
           <div> Birth-month: { info.birthMonth } </div>
-          <button onClick={() => {deleteInfo(info.id)}}> Delete </button>
+          <button onClick={deleteInfo.bind(this, info.id)}> Delete </button>
         </div>
       )
+      // The above onCLick event will be invoked because we are passing deleteInfo(info.id) to it.
+      // Usually we refer it like : onClick={deleteInfo} but here we need to pass id so we invoke it.
+      // therefore we surround this with an anonymous function which is fired only when onCLick is fired
+      // therefore the deleteInfo will be fired after the click. This helps us combat the
     });
 
     return(

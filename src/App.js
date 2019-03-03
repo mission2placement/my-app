@@ -21,13 +21,15 @@ class App extends Component {
     */
 
     displayInfos: [
-      { name: 'Jim', birthMonth:'June', id: 1 },
+      { name: 'Jim', age: 23, birthMonth:'June', id: 1 },
       { name: 'Pam', age: 31, birthMonth:'January', id: 2 },
       { name: 'Richard', age: 42, birthMonth:'August', id: 3 }
     ]
   }
 
   addInfo = (info) => {
+    // info= { name: '', age:'', birthMonth:'' }
+    // this.state.displayInfos.push(info);
     console.log('Inside App Component', info);
     /*
       We have state of AddInfo component here (i.e 'info' argument of the function)
@@ -75,7 +77,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-      console.log('Componentis mounted');
+      console.log('Component is mounted');
   }
 
   componentDidUpdate(prevProps, prevState, snapshot){
